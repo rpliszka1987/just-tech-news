@@ -30,6 +30,7 @@ User.init(
             type: DataTypes.STRING,
             allowNull: false,
             // there cannot be any duplicate email values in this table
+            unique: true,
             validate: {
                 isEmail: true
             }
@@ -49,7 +50,7 @@ User.init(
 
         // pass in our imported sequalize connection ( the direct connection to our database)
 
-        sequalize,
+        sequelize,
 
         // don't automatically create createdAt/updatedAt timestamp fields
 
