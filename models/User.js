@@ -82,7 +82,7 @@ User.init(
 
         // use underscores instead of camel-casing
 
-        underscore: true,
+        underscored: true,
 
         // make it so our model name stays lowecase in the database
 

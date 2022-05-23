@@ -34,7 +34,7 @@ Vote.init(
         sequelize, 
         timestamps: false,
         freezeTableName: true,
-        underscore: true,
+        underscored: true,
         modelName: 'vote'
     }
 );
