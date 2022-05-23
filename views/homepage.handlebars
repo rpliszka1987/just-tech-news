@@ -1,4 +1,6 @@
 <ol class="post-list">
+    {{!-- Start loop through object array --}}
+    {{#each posts as |post| }}
     <li>
         <article class="post">
             <div class="title">
@@ -13,4 +15,6 @@
             </div>
         </article>
     </li>
+    {{!-- End loop --}}
+    {{/each}}
 </ol>
