@@ -10,6 +10,8 @@
     </div>
 </article>
 
+{{!-- Will show if user is logged in --}}
+{{#if loggedIn }}
 <form class="comment-form">
     <div>
         <textarea name="comment-body"></textarea>
@@ -20,6 +22,7 @@
         <button type="button" class="upvote-btn">upvote</button>
     </div>
 </form>
+{{/if}}
 
 <div class="comments">
     {{#each post.comments}}
@@ -34,5 +37,8 @@
     {{/each}}
 </div>
 
+{{!-- Will load JS only if user logged in. Otherwise you get console log of missing js files. --}}
+{{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
 <script src="/javascript/upvote.js"></script>
+{{/if}}
