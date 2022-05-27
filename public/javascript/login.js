@@ -15,7 +15,8 @@ async function loginFormHandler(event) {
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        // Redirects to Dashboard page
+        document.location.replace('/dashboard');
       } else {
         alert(response.statusText);
       }
@@ -41,7 +42,8 @@ async function loginFormHandler(event) {
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        // redirects to the dashboard page
+        document.location.replace('/dashboard');
       } else {
         alert(response.statusText);
       }
