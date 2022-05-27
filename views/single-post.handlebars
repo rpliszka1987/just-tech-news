@@ -14,18 +14,7 @@
 </form>
 {{/if}}
 
-<div class="comments">
-    {{#each post.comments}}
-    <section class="comment">
-        <div class="meta">
-            {{user.username}} on {{created_at}}
-        </div>
-        <div class="text">
-            {{comment_text}}
-        </div>
-    </section>
-    {{/each}}
-</div>
+{{> comments post.comments }}
 
 {{!-- Will load JS only if user logged in. Otherwise you get console log of missing js files. --}}
 {{#if loggedIn}}
