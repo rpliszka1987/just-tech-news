@@ -1,0 +1,14 @@
+ <article class="post">
+    <div class="title">
+        <a href="{{post_url}}" target="_blank">{{title}}</a>
+        {{!-- Used handlebars helpers format_url --}}
+        <span>({{format_url post_url}})</span>
+    </div>
+    <div class="meta">
+        {{!-- Adding handlebars helper format_date to format the date amd format_plural --}}
+        {{vote_count}} {{format_plural "point" vote_count}} by {{user.username}} on {{format_date created_at}}
+        |
+        {{!-- Used handlebars helper format_plural --}}
+        <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" commebts.length}}</a>
+    </div>
+</article>
